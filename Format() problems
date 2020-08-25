@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jun 14 13:03:55 2020
+
+@author: test
+"""
+# Didn't know you could do this!
+# but why does elif not work whereas else does?
+a = ['begel', 'turkey','spem', 'eggs','spammm']
+if 'spam' in a:
+    print('yes')
+#else:
+#elif 'turkey' in a:
+# elif:  The problem here is elif needs an expression to evaluate!
+elif'spem':
+    print('close but no hat trick!')
+    
+# OK, let's play with that formatting types
+#    x = 3.85730
+#    y = 3
+#    z = x*y
+#    q = " this is a test "
+##    print("%3d\n \n%0.5f\n %0.5f\n %5s" % (y, x, z, q))
+#    """ note I can put \n characters is the former print statement ( before or
+#    after..., but no where in the latter print with the format statements)"""
+#    
+#    
+#    # Now let's test that 2nd formatting option Here's the paradigm
+#print(format(y,"3d"),"\n",format(x,"0.2f")) # Python 3
+#" Above I finally got the \n to work. Note where you have to place it~
+
+#print(format(y, "3d"),format(x,"0.5f"),format(z, "0.5f"),format(q,"s" ))
+
+#Problem is I can't put $ or \n in there without getting an error! I can in 
