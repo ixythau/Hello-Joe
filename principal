@@ -1,0 +1,373 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr  5 22:00:15 2020
+
+@author: test
+experimenting with print output using the special formatting operators `%`
+"""
+
+#principal = 1000
+#rate = 0.05
+#numyears = 5
+#years = 1
+#while years <= numyears:
+#    principal = principal * ( 1 + rate )
+##    print("%3d %0.4" % (years, principal)) # Do you see your error here?
+#    print("%3d %0.4f" % (years, principal))
+#    years += 1
+##    
+    
+#But how would I enter a dollar sign ($) before the output?
+#    print("%3d $%0.2f" % (years, principal)) # answer!
+    
+
+
+  #  print("%3d %3.2f" % (years, principal))
+""" I see no effect of puting an
+    integer before the decimal e.g. 3.2 
+"""
+
+
+
+
+
+# The MIT lecture emphasized the importance of concatenation.
+#print('Welcome','to my', 'world, today')
+#
+##...as opposed to this*
+#print('Welcome''to my' 'world, today')# you have to add  your own spacing here!
+##...or this
+#print('Welcome'+ 'to my'+ 'world, today') # you have to add  your own spacing here!
+#
+
+#print("{0:3d} {1:0.2f}".format(years,principal)) # Python 3 Try this!
+
+
+"""
+Note the error message you get when you reverse the order of years & principal
+or reverse the sequence of the formatting operators below ( The essence of the problem )
+Traceback (most recent call last):
+
+  File "<ipython-input-1-669f4a745784>", line 1, in <module>
+    runfile('/Users/test/.spyder-py3/principal', wdir='/Users/test/.spyder-py3')
+
+  File "/Applications/anaconda3/lib/python3.7/site-packages/spyder_kernels/customize/spydercustomize.py", line 827, in runfile
+    execfile(filename, namespace)
+
+  File "/Applications/anaconda3/lib/python3.7/site-packages/spyder_kernels/customize/spydercustomize.py", line 110, in execfile
+    exec(compile(f.read(), filename, 'exec'), namespace)
+
+  File "/Users/test/.spyder-py3/principal", line 44, in <module>
+    print("{0:3d} {1:0.2f}".format(principal,years)) # Python 3 Try this!
+
+ValueError: Unknown format code 'd' for object of type 'float'
+
+"""# this is program oops for the control Flow lecture
+#for x in range(28):
+#    #print(x)
+#    if x > 17:
+#        break
+#    print(x)
+#    
+##Remember range starts at zero and ends at n-1
+#for x in range(5):
+#    print(x)
+#    
+#""" Note this extenion of the IN statement, for lack of a better word """
+#b = 'bagel begal'
+#if 'gelb' in b:
+#    print('yup')
+
+#iteration = 0
+#count = 0
+#while iteration < 5:
+#    # the variable 'letter' in the loop stands for every 
+#    # character, including spaces and commas!
+#    for letter in "hello, world": 
+#        count +=1
+#    print("Iteration " + str(iteration) + "; count is: " + str(count))
+#    iteration += 1 
+
+#iteration = 0
+#while iteration < 5:
+#    count = 0
+#    for letter in "hello, world":
+#        count += 1
+#    print("Iteration " + str(iteration) + "; count is: " + str(count))
+#    iteration += 1 
+#    
+#Python 3.7.0 (default, Jun 28 2018, 07:39:16)
+#Type "copyright", "credits" or "license" for more information.
+#
+#IPython 7.8.0 -- An enhanced Interactive Python.
+#
+#In [1]: r = [5,4,3,2,1,0,-1,-2,-3,-4,-5]
+#
+#In [2]: r[:::-1]
+#   ...: 
+#  File "<ipython-input-2-4f29671565fb>", line 1
+#    r[:::-1]
+#        ^
+#SyntaxError: invalid syntax
+#
+#
+#In [3]: 
+#
+#In [3]: r[::-1]
+#Out[3]: [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+#
+#In [4]: r[3:7]
+#Out[4]: [2, 1, 0, -1]
+#
+#In [5]: r[7:3]
+#Out[5]: []
+#
+#In [6]: r[7:3:-]
+#  File "<ipython-input-6-80aebfd20ecd>", line 1
+#    r[7:3:-]
+#           ^
+#SyntaxError: invalid syntax
+#
+#
+#In [7]: 
+#
+#In [7]: r[7:3:-1]
+#Out[7]: [-2, -1, 0, 1]
+#
+#In [8]: r[7:3]
+#Out[8]: []
+#
+#In [9]: r[3:7]
+#Out[9]: [2, 1, 0, -1]
+#
+#In [10]: r
+#Out[10]: [5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5]
+#
+#In [11]: rb = range(12,2)
+#
+#In [12]: rb
+#Out[12]: range(12, 2)
+#
+#In [13]: list(rb)
+#Out[13]: []
+#
+#In [14]: list(range(12,2,-1)
+#    ...: )
+#Out[14]: [12, 11, 10, 9, 8, 7, 6, 5, 4, 3]
+
+
+#
+#STILL WORKING ON MY SLICE CONFUSION PROBLEM!!!
+#In [3]: r = [-3,-2,-1,0,1,2,3,4,5]
+#
+#In [4]: r
+#Out[4]: [-3, -2, -1, 0, 1, 2, 3, 4, 5]
+#
+#In [5]: type(r)
+#Out[5]: list
+#
+#In [6]: r[2:6]
+#Out[6]: [-1, 0, 1, 2]
+#
+#In [7]: r[2:6:-1]
+#Out[7]: [] Out o range. it could work but you mis-typed the range?
+#
+#In [8]: r[-2:6:-1]
+#Out[8]: [4]
+#
+#In [9]: r[-2:-6:-1]
+#Out[9]: [4, 3, 2, 1]
+#
+#In [10]: r[-2:-7:-1]
+#Out[10]: [4, 3, 2, 1, 0]
+#
+#In [11]: r[-2:7:-1]
+#Out[11]: []
+#
+#In [12]: what = ['a','b','c','d','e']
+#
+#In [13]: r
+#Out[13]: [-3, -2, -1, 0, 1, 2, 3, 4, 5]
+#
+#In [14]: r[-2:0]
+#Out[14]: []
+#
+#In [15]: r[-2:1]
+#Out[15]: []
+#
+#In [16]: r[-2:1:-1]
+#Out[16]: [4, 3, 2, 1, 0, -1]
+#
+#In [16]: 
+#
+#In [16]: 
+#
+#In [17]: r
+#Out[17]: [-3, -2, -1, 0, 1, 2, 3, 4, 5]
+#
+#In [18]: r[1:7]
+#Out[18]: [-2, -1, 0, 1, 2, 3]
+#
+#In [19]: r[1:7:-1]
+#Out[19]: []
+#
+#In [20]: r[7:1:-1]
+#Out[20]: [4, 3, 2, 1, 0, -1]
+#
+#In [21]: r[-2:4]
+#Out[21]: []
+#
+#In [22]: r[-2:4:-1]
+#Out[22]: [4, 3, 2]
+#
+#In [23]: r
+#Out[23]: [-3, -2, -1, 0, 1, 2, 3, 4, 5]
+#
+#In [24]: r[4:7]
+#Out[24]: [1, 2, 3]
+#
+#In [25]: r[4:7:-1]
+#Out[25]: []
+#
+#In [25]: 
+#
+#In [26]: r[2:4]
+#Out[26]: [-1, 0]
+#
+#In [27]: r[-2:4]
+#Out[27]: []
+#
+#In [28]: r[-2:4:-1]
+#Out[28]: [4, 3, 2]
+#
+#In [29]: r
+#Out[29]: [-3, -2, -1, 0, 1, 2, 3, 4, 5]
+#
+#In [29]: 
+#    ...: 
+#
+#In [30]: r
+#Out[30]: [-3, -2, -1, 0, 1, 2, 3, 4, 5]
+#
+#In [31]: r[2:2:-1]
+#Out[31]: []
+#
+#In [32]: r[2:2]
+#Out[32]: []
+#
+#In [33]: r[-2:2]
+#Out[33]: []
+#
+#In [34]: r[-2:2:-1]
+#Out[34]: [4, 3, 2, 1, 0]
+#
+#In [35]: r[-2:2]
+#Out[35]: []
+#
+#In [36]: r[-2:0]
+#Out[36]: []
+#
+#In [37]: r[0:2]
+#Out[37]: [-3, -2]
+#
+#In [38]: r
+#Out[38]: [-3, -2, -1, 0, 1, 2, 3, 4, 5]
+#
+#In [39]: r[0:-2]
+#Out[39]: [-3, -2, -1, 0, 1, 2, 3]
+#
+#In [40]: r[-1:-2]
+#Out[40]: []
+#
+#In [41]: r[-1:-6]
+#Out[41]: []
+#
+#In [42]: r[-1:-6:-1]
+#Out[42]: [5, 4, 3, 2, 1]
+#
+#In [43]: r[-6:-1]
+#    ...: 
+#Out[43]: [0, 1, 2, 3, 4]
+#
+#In [44]: r[-6:-1:-1]
+#Out[44]: []
+#
+#In [45]: r
+#Out[45]: [-3, -2, -1, 0, 1, 2, 3, 4, 5]
+#
+#In [46]: r[2:6]
+#Out[46]: [-1, 0, 1, 2]
+#
+#In [47]: r[2:6:1]
+#Out[47]: [-1, 0, 1, 2]
+#
+#In [48]: r[2:6:-1]
+#Out[48]: []
+#
+#In [49]: r[6:2]
+#Out[49]: []
+#
+#In [50]: r[6:2:-1]
+#Out[50]: [3, 2, 1, 0]
+#
+#In [50]: 
+#
+#In [51]: r[2:6:-1]
+#Out[51]: []
+#
+#In [52]: r[6:2:-1]
+#Out[52]: [3, 2, 1, 0]
+#
+
+
+#OK. That 1st example in exercises is wrong it goes into infinite loop
+#Then this program I  created below. There seems no need for the count.
+#Just divide the step into the value tripped ove and they.re equivalent?
+#x = 54
+
+#cube = -8
+#epsilon = 0.01
+#guess = 0.00
+#increment = 0.001
+#num_guesses = 0
+#
+#while ( abs(guess**3 -abs(cube))) >= epsilon and guess <= abs(cube):
+#    guess += increment
+#    num_guesses += 1
+#
+#print('num_guesses =', num_guesses)
+#if abs(guess**3 -abs(cube)) >= epsilon :
+#    print('Failed on cube root of :', cube)
+#else:
+#    if cube < 0:
+#        guess = - guess
+#    print(guess, 'is close to the cube root of :', cube)
+
+x = 25
+epsilon = 0.01
+step = 0.1
+guess = 0.0
+
+while guess <= x:
+    if abs(guess**2 -x) < epsilon:
+        break
+    else:
+        guess += step
+
+if abs(guess**2 - x) >= epsilon:
+    print('failed')
+else:
+    print('succeeded: ' + str(guess))
+#If this code is executed, it will print succeeded: 4.9999999999998 (or succeeded: 5.0). Remember floating point errors?
+
+#count = 0
+#guess = 0
+#step = 0.01
+#while (guess **2) -x < 0 :
+#    guess += step
+#    count +=1
+#print(guess, 'after ', count, 'STEPS')
+#
+#So how would i define an array or list to grab values within some specified range
+#and pipe that to a graphical meter or gradiule for measurement?

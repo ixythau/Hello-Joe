@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jun 14 13:03:55 2020
+
+@author: test
+"""
+# Didn7t know you could do this!
+# but why does elif not work whereas else does?
+a = ['begel', 'turkey','spem', 'eggs','spammm',False]
+#if 'spam' in a: # seems like we can surf with dynamic typing of the for?
+#    print('yes')
+##else:
+##elif 'turkey' in a:
+## elif:  The problem here is elif needs an expression to evaluate!
+#elif'spem':
+#    print('close but no hat trick!')
+    
+# OK, let's play with that formatting types
+#    x = 3.85730
+#    y = 3
+#    z = x*y
+#    q = " this is a test "
+##    print("%3d\n %0.5f\n %0.5f\n %5s" % (y, x, z, q))
+    
+    # Now let's test that 2nd formatting option Here's the paradigm
+#print(format(year,"3d"),format(principal,"0.2f")) # Python 3
+
+#print(format(y, "3d"),format(x,"0.5f"),format(z, "0.5f") )
+
+#if False in a: # seems like we can surf with dynamic typing of the for?
+#    print('yes')
+##else:
+##elif 'turkey' in a:
+## elif:  The problem here is elif needs an expression to evaluate!
+#elif'spem':
+#    print('close but no hat trick!')
+#count = 0
+#x = 'stopatoyotatoyotab'
+#y = 'toy'
+#for toy in x:
+#    count +=1
+#print(count)
+    
+#happy = 0
+#while happy < 2:
+#  #  print('\t Happy = ', happy, '\n\n Hello World')
+#    happy += 1
+#print('Happy is = ', happy)
+#    
+    
+    
+#num = 5
+#if num > 2:
+#    print(num)
+#    num -= 1
+#print(num)
+
+
+# MUTABILITY
+""" STRINGS ARE NOTE MUTABLE. ONLY WAY TO CHANGE A STRING IS CREATING A NEW 
+STRING.  LISTS ARE MUTABLE AND POINT TO THE SAME ID(X)
+"""
+
+r = 'in the mean time, in between time, aint we got fun!'
+print(id(r))
+print(type(r))
+r +='zzz'
+print(r)
+print(id(r))
+
+l = ['what a revolting set of circumstances']
+print(l)
+print(type(l))
+print(id(l))
+l.append('baby')
+print(l)
+print(id(l))
+
+
+    
